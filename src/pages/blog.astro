@@ -2,13 +2,16 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
-const pageTitle = "Home Page";
+const pageTitle = "Articles";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <p>This is where I will post about my journey learning Astro.</p>
+<h2>My awesome blog subtitle</h2>
+<p>This is where I will post about my journey learning Astro.</p>
 		
-		<ul>
-			{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-		</ul>
+<div class="blog-grid">
+	{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title + post.frontmatter.description} />)}
+</div>
+
+
+
 </BaseLayout>
