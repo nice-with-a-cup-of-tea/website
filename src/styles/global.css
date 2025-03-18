@@ -55,7 +55,10 @@ header {
 
     & .logo {
       display: inline-block;
-      margin-right: 1rem;
+      margin: 0;
+      &:last-of-type {
+        margin-right: 1rem;
+      }
     }
 
     & .tagline {
@@ -100,12 +103,15 @@ main {
   /* background-color: #E84632; */
   /* background-color: #C9283E; */
   /* padding: 1rem 2rem; */
+  padding: 0 0 8rem 0;
 }
 
 main h1 {
-  font-size: 9rem;
+  /* font-size: clamp(3rem, 9rem, 12rem); */
+  font-size: clamp(2rem, -0.875rem + 8.333333vw, 9rem);
   padding: 1rem 2rem;
   margin: 0;;
+  max-width: 80ch;
 }
 
 main h1.hello {
@@ -117,6 +123,20 @@ main h1.hello {
   padding: 1rem 2rem;
   /* background-color: antiquewhite; */
 }
+
+
+.home p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  max-width: 70ch;
+
+  & em {
+    font-style: normal;
+    text-decoration: line-through;
+  }
+}
+
 
 
 /* 
