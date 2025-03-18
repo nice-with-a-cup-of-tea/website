@@ -112,6 +112,11 @@ main h1 {
   padding: 1rem 2rem;
   margin: 0;;
   max-width: 80ch;
+  &:hover {
+    /* background-color: #E84632; */
+    background-color: hsla(7, 80%, 65%, 1);
+    color: #ffffff;
+  }
 }
 
 main h1.hello {
@@ -130,6 +135,7 @@ main h1.hello {
   line-height: 1.8rem;
   font-weight: 400;
   max-width: 70ch;
+  color: #E84632;
 
   & em {
     font-style: normal;
