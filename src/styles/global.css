@@ -184,30 +184,6 @@ p {
 }
 
 
-.rules-text-display {
-  margin: 0 auto;
-  max-width: 500px;
-  text-align: center;
-  text-transform: uppercase;
-  display: block;
-  background-color: antiquewhite;
-
-  & .no {
-    font-size: 20rem;
-    font-weight: 700;
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    line-height: 0.875em;
-  }
-  & .list {
-    font-size: clamp(0.25rem, -1.25rem + 8.333333vw, 2rem);
-    font-weight: 700;
-    line-height: 1em;
-  }
-}
-
 .test {
   padding: 0;
 }
@@ -231,11 +207,12 @@ section div {
   & h3 {
     font-size: 3rem;
     margin-top: 1rem;
+    min-height: 3em;
   }
 }
 
 .way-col2, .way-col3 {
-  width: 25%;
+  width: 24%;
   padding-left: 1rem;
 
   & h4 {
