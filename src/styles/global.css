@@ -83,18 +83,26 @@ header {
 
   & a {
     text-decoration: none;
-    padding: 1.5rem;
+    padding: 0.5rem 1rem;
     color: black;
     display: inline-block; 
   }
   & a:first-of-type {
-    padding: 1.5rem 1rem 1.5rem 2rem;
+    /* padding: 1.5rem 1rem 1.5rem 2rem; */
   }
 
   & a:hover {
     text-decoration: solid underline black 2px;
-    /* background-color: var(--grey); */
-    /* color: #fff; */
+  }
+}
+
+.nav-links {
+  /* display: grid; */
+  flex-wrap: wrap;
+  padding-left: 0rem;
+
+  & a {
+
   }
 }
 
@@ -112,6 +120,11 @@ main h1 {
   padding: 1rem 1rem;
   margin: 0;;
   max-width: 80ch;
+}
+
+main h1.hello {
+  cursor: pointer;
+  
   &:hover {
     /* background-color: #E84632; */
     background-color: hsla(7, 80%, 65%, 1);
@@ -119,14 +132,16 @@ main h1 {
   }
 }
 
-main h1.hello {
-  cursor: pointer;
+.content {
+  /* border-top: black solid 1px; */
+  /* padding: 1rem 1rem; */
+  /* background-color: antiquewhite; */
 }
 
-.content {
-  border-top: black solid 1px;
-  padding: 1rem 1rem;
-  /* background-color: antiquewhite; */
+section {
+  width: 100%;
+  border-top: 1px solid black;
+  padding: 1rem;
 }
 
 
@@ -143,6 +158,92 @@ main h1.hello {
   }
 }
 
+p {
+  display: inline-block;
+  padding: 0 0 0.75em 0;
+  margin: 0;
+}
+
+.index {
+  display: block;
+  width: 200px;
+  border: 4px solid black;
+  padding: 0;
+  margin: 0 0 2rem 1rem;
+  font-weight: 600;
+  background-color: #fff;
+  color: #464646;
+  & li {
+    display: inline-block;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    &:hover {
+      background-color: hsl(199, 67%, 47%, 35%);
+    }
+  }
+}
+
+
+.rules-text-display {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  background-color: antiquewhite;
+
+  & .no {
+    font-size: 20rem;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0.875em;
+  }
+  & .list {
+    font-size: clamp(0.25rem, -1.25rem + 8.333333vw, 2rem);
+    font-weight: 700;
+    line-height: 1em;
+  }
+}
+
+.test {
+  padding: 0;
+}
+
+.hero {
+  background-color:hsla(7, 80%, 65%, 1);
+  /* background-color: #E84632; */
+  color: #ffffff;
+}
+
+section div {
+  vertical-align: top;
+  margin: 0;
+  padding: 1rem 0;
+  display: inline-block;
+}
+
+.way-col1 {
+  width: 49%;
+
+  & h3 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+}
+
+.way-col2, .way-col3 {
+  width: 25%;
+  padding-left: 1rem;
+
+  & h4 {
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+  }
+}
+
 @media screen and (min-width: 636px) { 
   body {
     padding: 0 2rem;
@@ -150,14 +251,24 @@ main h1.hello {
   .wrapper {
     padding: 0 2rem;
   }
-  haeder h1 {
+  header h1 {
     padding: 0 2rem;
   }
   main h1 {
     padding: 1rem 2rem;
   }
   .content {
+    /* padding: 1rem 2rem; */
+  }
+  section {
     padding: 1rem 2rem;
+  }
+  .nav-links {
+    padding-left: 1rem;
+
+    & a {
+      padding: 1.5rem;
+    }
   }
 }
 
