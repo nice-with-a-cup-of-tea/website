@@ -5,10 +5,51 @@
 }
 
 
-html {
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
   box-sizing: border-box;
-  /* font-size: 62.5%;  */
-  /* text-size-adjust: none; */
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  /* -webkit-font-smoothing: antialiased; */
+}
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
 }
 
 body {
@@ -20,11 +61,6 @@ body {
   background-color: #2897ca;
   /* color: var(--grey); */
   color: rgb(0.094118 0.086275 0.090196/1);
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-  
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -185,8 +221,9 @@ p {
 }
 
 
-.test {
+.section-tri {
   padding: 0 0 1rem 0;
+  display: grid
 }
 
 .hero {
@@ -202,20 +239,19 @@ section div {
   display: inline-block;
 }
 
-.way-col1 {
-  width: 49%;
+.section-tri {
+  grid-template-columns: 1fr;
+  gap: 0 2rem;
 
+  & .col2, .col1 {
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+  }
   & h3 {
     font-size: 3rem;
     margin-top: 1rem;
-    min-height: 3em;
+    /* min-height: 3em; */
   }
-}
-
-.way-col2, .way-col3 {
-  width: 24%;
-  padding-left: 1rem;
-
   & h4 {
     font-size: 1.5rem;
     margin: 1rem 0 1rem 0;
@@ -248,7 +284,30 @@ section div {
       padding: 1.5rem;
     }
   }
+  
+  .section-tri {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    & .col2 {
+      grid-column: span 4;
+    }
+    & .col1 {
+      grid-column: span 2;
+    }
+  }
 }
+
+
+@media screen and (min-width: 940px) { 
+  .section-tri {
+    & .col2 {
+      grid-column: span 2;
+    }
+    & .col1 {
+      grid-column: span 1;
+    }
+  }
+}
+
 
 /* 
 
