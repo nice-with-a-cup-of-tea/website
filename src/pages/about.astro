@@ -1,15 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "About Us";
+const pageTitle = "The Tea";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <h2>... and my new Astro site!</h2>
+  <h1>{pageTitle}</h1>
+  <div class="content">
+    <section class="hero-patreon">
+      <div class="hero-lite">
+        <p>
+          Learn about us.
+          
+        </p>
+      </div>
+      <div class="cta">
+        <a href="">Join Our Discord</a>
+      </div>
+    </section>
+    <section class="section-tri">
+      <div class="col2"><h3>About.</h3></div>
+      <div class="col1"></div>
+      <div class="col1">
+        
+      </div>
       
-  <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-
-  <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-
-  <p>Here are a few facts about me:</p>
+    </section>
 
 </BaseLayout>
