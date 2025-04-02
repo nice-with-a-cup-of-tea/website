@@ -52,6 +52,11 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+html {
+  scrollbar-color: #175572 #5fa8ca;
+  scrollbar-width: think;
+}
+
 body {
   margin: 0;
   padding: 0 1rem;
@@ -257,11 +262,12 @@ p {
     & a {
       display: block;
       margin: 0;
-      padding: 2rem 2rem;
+      padding: 3rem 2rem;
 
       
       color: inherit;
       background-color: blanchedalmond;
+      background-color: #FFC743;
       text-decoration: underline 0.15em hsla(7, 80%, 65%, 1);
       text-underline-offset: 0.1em;
       transition: text-underline-offset 300ms;
@@ -296,6 +302,27 @@ section div {
     font-size: 1.5rem;
     margin: 1rem 0 1rem 0;
   }
+
+  & a {
+    color: #000000;
+  }
+}
+
+.hero-lite {
+  padding: 2rem 0 1rem 2rem;
+  font-family: var(--header);
+  font-weight: 600;
+  font-size: clamp(1rem, -0.875rem + 6vw, 1.6rem);
+  width: 2fr;
+
+  & p {
+
+  }
+}
+
+.makers-list {
+  list-style: none;
+  padding: 0;
 }
 
 @media screen and (min-width: 636px) { 
@@ -346,6 +373,9 @@ section div {
         padding: 5rem;
       }
     }
+  }
+  .hero-lite {
+    /* padding: 5rem 5rem; */
   }
 }
 
