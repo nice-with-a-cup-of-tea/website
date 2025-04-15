@@ -1,17 +1,29 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'My First Blog Post'
+title: 'Spaces vs stories '
 pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+author: 'arranrp'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+# Spaces vs Stories 
 
-## What I've accomplished
+*Caveat: This advice will be applicable to many games at many tables but far from all.*
+
+## Intro
+
+My favourite thing about GM’ing is breathing life into a setting and creating a story. The operative word being creating, not telling, not acting as the auteur & reading from a script.
+In the vein of “being the players’ biggest fan”, I’m here to enable them to create awesome moments. So I’ve found myself looking at preparation differently as I’ve gained more experience as a GM & started looking at sessions through the lens of my time as an interaction designer.
+
+More often than not when game night rolls around and your players gather, they have a goal, or more to the point their characters do. It might be; explore the dungeon, rob the bank, romance the dowager countess or avoid being caught drunk at the wizard school.
+
+Now for those of us that prep or use/create encounters & adventures it’s common to think in terms of narrative, a series of events that can be strung together in some kind of order.
+
+**It might look something like this:**
+
 
 1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
 
